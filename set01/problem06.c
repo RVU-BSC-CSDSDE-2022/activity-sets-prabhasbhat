@@ -1,34 +1,41 @@
+int input();
+void compare(int a, int b, int c, int *large);
+void output(int a, int b, int c, int large);
+
 #include<stdio.h>
-int main(void)
+void main()
 {
-  int a,b,c,result;
-  printf("Enter the first number\n");
-  scanf("%d",&a);
-  printf("Enter the second number\n");
-  scanf("%d",&b);
-  printf("Enter the third number\n");
-  scanf("%d",&c);
-  result=comp_func(&a,&b,&c);
-  printf("The greatest of the 3 numbers is %d",result);
-  return(0);
+    int a,b,c,largest;
+    a=input();
+    b=input();
+    c=input();
+    compare(a,b,c,&largest);
+    output(a,b,c,largest);
+
 }
-comp_func(int *a,int *b,int *c)
+int input()
 {
-  int temp;
-  if((*a>*b)&(*a>*c))
-  {
-    temp=*a;
-  }
-  else if((*b>*a)&(*b>*c))
-  {
-    temp=*b;
-  }
-  else
-  {
-    temp=*c;
-  }
-
-return temp;
+    int a;
+    printf("enter the number\n");
+    scanf("%d",&a);
+    return a;
 }
-
-
+void compare(int a, int b, int c,int *largest)
+{
+    if ((a>b)&(a>c))
+    {
+        *largest=a;
+    }
+    else if((b>a)&(b>c))
+    {
+        *largest=b;
+    }
+    else
+    {
+        *largest=c;
+    }
+}
+void output(int a, int b, int c, int large)
+{
+    printf("The largest of %d , %d and %d is %d",a,b,c,large);
+}
