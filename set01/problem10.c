@@ -10,7 +10,6 @@ int main()
    int result=0;
     input_two_strings(string1, string2);
     result=stringcompare(string1,string2);
-    printf("%d",result);
     output(string1, string2, result);
      return 0;
 }
