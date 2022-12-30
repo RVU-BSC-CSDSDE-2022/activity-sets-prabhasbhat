@@ -1,8 +1,8 @@
-int input();
-void compare(int a, int b, int c, int *large);
-void output(int a, int b, int c, int large);
-
+//compare 3 nums using pass by reference
 #include<stdio.h>
+int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
 void main()
 {
     int a,b,c,largest;
@@ -15,14 +15,14 @@ void main()
 }
 int input()
 {
-    int a;
-    printf("enter the number\n");
-    scanf("%d",&a);
-    return a;
+    int num;
+    printf("Enter the number\n");
+    scanf("%d",&num);
+    return num;
 }
-void compare(int a, int b, int c,int *largest)
+void compare(int a, int b, int c, int *largest)
 {
-    if ((a>=b)&(a>=c))
+    if((a>=b)&(a>=c))
     {
         *largest=a;
     }
@@ -35,7 +35,7 @@ void compare(int a, int b, int c,int *largest)
         *largest=c;
     }
 }
-void output(int a, int b, int c, int large)
+void output(int a, int b, int c, int largest)
 {
-    printf("The largest of %d , %d and %d is %d",a,b,c,large);
+    printf("The largest of %d , %d and %d is %d",a,b,c,largest);
 }
