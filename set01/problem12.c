@@ -16,7 +16,7 @@ void output(int n, Complex c[n], Complex result);
 int main()
 {
    int n;
-   Complex result={0,0};
+   Complex result={0,0}; //result.imag=0 and result.real=0
    n=get_n();
    Complex c[n];
    input_n_complex(n,c);
@@ -45,7 +45,8 @@ Complex input_complex()
 
 void input_n_complex(int n , Complex c[n])
 {
-  for(int i=0;i<n;i++)
+  int i;
+  for(i=0;i<n;i++)
     {
            c[i] =input_complex();
     }

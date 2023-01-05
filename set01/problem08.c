@@ -42,11 +42,13 @@ int sum_n_array(int n, int a[n])
 void output(int n, int a[n],int sum)
 {
     int i;
-    for(i=0;i<n;i++)
+    for(i=0;i<n-1;i++)
     {
         printf("%d+",a[i]);
     }
-    printf("is %d",sum);
+    printf("%d",a[n-1]);    //the sum of the elements was also available in a[-1]??? how???
+    printf(" is %d",sum);
 }
+
 
 

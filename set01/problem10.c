@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void input_two_strings(char *string1, char *string2);
 int stringcompare(char *string1, char *string2);
 void output(char *string1, char *string2, int result);
@@ -19,12 +18,11 @@ void input_two_strings(char *string1, char *string2)
   scanf("%s",string1);
   printf("Enter the second string\n");
   scanf("%s",string2);
-//   printf("%s",string2);
 }
 
 int stringcompare(char *string1, char *string2)
 {
-    int result=0,i=0,flag=0;
+    int i=0,flag=0;
     while(string1[i]!='\0' && string2[i]!='\0')
       {
           if(string1[i]!=string2[i])
@@ -37,7 +35,7 @@ int stringcompare(char *string1, char *string2)
 
     if(flag==0)
   {
-     if(string1[i]=='\0' && string2[i]=='\0')
+    if(string1[i]=='\0' && string2[i]=='\0')
        return 0;
     else if(string1[i]=='\0')
       return 1;
