@@ -15,7 +15,7 @@ void main()
 void input_camel_details(float *radius, float *height, float *length)
 {
     float weight;
-    printf("Enter thr radius \n");
+    printf("Enter the radius \n");
     scanf("%f",radius);
     printf("Enter the height\n");
     scanf("%f",height);
@@ -29,9 +29,8 @@ void input_camel_details(float *radius, float *height, float *length)
 float find_weight(float radius, float height, float length)
 {
     float weight;
-    float pi=3.14;
+    float pi=3.1415;
     weight=pi* pow(radius,3) * sqrt(height * length);
-    printf("%f",weight);
     return weight;
 }
 void output(float radius, float height, float length, float weight)
