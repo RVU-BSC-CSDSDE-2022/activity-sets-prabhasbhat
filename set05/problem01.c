@@ -1,4 +1,4 @@
-//d=√((x2 – x1)² + (y2 – y1)²).
+//d=√((x2 – x1)² + (y2 – y1)²)
 #include<stdio.h>
 #include<math.h>
 struct _point {
