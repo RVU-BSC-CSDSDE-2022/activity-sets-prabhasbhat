@@ -40,14 +40,18 @@ int sum_composite_numbers(int n, int a[n])
   for (i=0;i<n;i++)
   {
     count=0;
-    for (j=2;j*j<=a[i];j++)
+    for (j=1;j<=a[i];j++)
       {
         if ((a[i])%(j)==0)
         {
-            sum=sum+a[i];
-            break;
+            count=count+1;
         }
+        
       }
+      if(count>2)
+        {
+            sum=sum+a[i];
+        }
   }
   return sum;
 }
